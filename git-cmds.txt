@@ -1,3 +1,4 @@
+//git-cmds.txt
 https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository
 
 //**test installation
@@ -22,7 +23,7 @@ $ git init					//creates .git repository dir (or reinitializes)
 $ rm -rf .git				//ends version ctrl
 
 //** .gitignore file in current directory
-$ cat .gitignore //create list of excluded files
+$ //contains a list of excluded files
 .project	//ignored folder
 *.obj		//ignore
 

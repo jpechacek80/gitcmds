@@ -1,9 +1,10 @@
+//git-cmdlist
+https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository
 git version
-git init
 git help
 git config
-git add
-git reset
+git init, git clone
+git add, git reset
 git commit
 git status
 git log
@@ -14,22 +15,28 @@ git mv
 git checkout
 git tags
 git branch
-git remote -v		//lists 
+git remote -v			//lists 
 git remote add 
 
-git init: Initializes a new Git repository in the current directory
-Only after you input this does it accept further Git commands.
+$ git version			//test installation
 
-git help: lists 21 most common git commands
 $ git help config //help on "config options"
+$ git help					// lists 21 common git commands
 
 git config: Setting up Git for the first time.
+~\.gitconfig						//path for cfg file
 $ git config --list			//shows config settings
-$ git config --global user.name "jpechacek"
+$ git config --global user.name "jpechacek80"
 $ git config --global user.email "jpechacek@yahoo.com"
 
-git add: Stages new files to be committed to the Git repository.
+//**Creates new local Git repo in the workdir
+git init					//create new empty local repo
+git clone <url>		//copy from remote repo
+$ git clone https://github.com/jpechacek80/mypjt
+// creates a pjt folder called mypjt
+// contains src files + .git directory + .gitignore
 
+git add: Stages new files to be committed to the Git repository.
 
 git status: Check the repository status
 List files, changes to be committed, and which current branch of the repository.

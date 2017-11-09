@@ -1,15 +1,15 @@
-
 /git-cmds
 http://rogerdudler.github.io/git-guide/
 
 //**nomenclature
 workdir			//working directory
+repo				//Repository	
 Local Repository	//local computer
 Remote Repository	//server computer
 Repository contains:
-	workdir		//holds src files
-	index		//staging area
-	HEAD		//points to most recent commit
+workdir		//holds src files
+index		//staging area
+HEAD		//points to most recent commit
 branch			//a distinct version of src files
 master			//default branch for repo
 origin			//default link name for remote repo
@@ -17,7 +17,7 @@ origin			//default link name for remote repo
 //**install
 # apt-get install git-all
 $ git version			//test installation
-$ git config			//user,name, user.email, etc
+$ git config			//local and global settings
 
 //**git Global Configuration
 $ git config --global [setting]
@@ -39,11 +39,11 @@ $ git commit -a -m mycomment
 
 //**get status
 git status		//indexed
-git log			//list commits
-git diff		//compare workdir w/index
-git tag			//list tags
+git log				//list commits
+git diff			//compare workdir w/index
+git tag				//list tags
 git branch		//list branches
-gir branch -r		//list remote branches
+gir branch -r	//list remote branches
 
 
 git checkout <F>	//F=file->workdir
