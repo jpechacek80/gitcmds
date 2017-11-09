@@ -35,7 +35,7 @@ $ git init			//creates .git directory
 git add			//add src files to index
 git commit		//add src file to HEAD
 $ git add *.c
-$ git commit -a -m mycomment
+$ git commit -a -m "mycomment"
 
 //**get status
 git status		//indexed
