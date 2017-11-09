@@ -1,0 +1,59 @@
+git-usage
+
+/**REPO STATUS CMDS
+$ git help config		//help on "config options"
+$ git help add			//help on "add" cmd
+$ git config -l			//lists configuration
+$ git status				//staged green, untracked red
+$ git log						//git index history
+$ git remote				//lists remotes
+$ git branch				//lists branches
+$ git branch -r			//lists remote branches
+$ git log --name-only	//lists files in Repo
+$ git show --name-only
+
+//** ADD TRACKED FILES
+$ git add myfile		//add myfile to index (stage)
+$ git add mydir			//add a directory to index
+$ git add -A				//adds all files  to index
+$ git add *.cs			/add specific files
+$ git reset					//remove everything staged
+$ git reset fname		//unstage fname
+
+//** COMMIT
+$ git commit										//prompted comment
+$ git commit [-a] [-m msg]
+$ git commit -a -m Ver07				//stage all, then commit
+
+//**show commit log
+$ git log				//show hash
+$ git log -p 		//shows diff
+$ git log --name-only
+
+
+//** branch--create or delete branches
+$ git branch 						//list current branch
+$ git branch branch1		//create new branch called 'x_feature'
+$ git branch < -d | -D |  -m > branch1
+-flag
+	-d				delete unmerged branch1
+	-D				delete merged branch1 (forced)
+	-m				rename current branch to branch1
+
+//** checkout--navigate branches
+***checking out commits
+$ git checkout hash						//get all files in old vesion
+$ git checkout hash myfile		//get old version of a file
+
+***checking out branches
+$ git checkout master
+$ git checkout <existing-branch>		//copy working tree to cur dir
+
+
+git checkout
+git revert
+git reset
+git clean
+
+
+

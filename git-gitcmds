@@ -1,0 +1,109 @@
+
+/git-cmds
+http://rogerdudler.github.io/git-guide/
+
+//**nomenclature
+workdir			//working directory
+Local Repository	//local computer
+Remote Repository	//server computer
+Repository contains:
+	workdir		//holds src files
+	index		//staging area
+	HEAD		//points to most recent commit
+branch			//a distinct version of src files
+master			//default branch for repo
+origin			//default link name for remote repo
+
+//**install
+# apt-get install git-all
+$ git version			//test installation
+$ git config			//user,name, user.email, etc
+
+//**git Global Configuration
+$ git config --global [setting]
+	settings:
+	user.name "jsmith"
+	user.email jsmith@yahoo.com
+	user.editor "vi"
+	core.excludesfile ~/.gitignore_global
+	core.excludesfile ~/.gitignore_global
+
+//**git Initialization
+$ git init			//creates .git directory
+
+//**src file data entry
+git add			//add src files to index
+git commit		//add src file to HEAD
+$ git add *.c
+$ git commit -a -m mycomment
+
+//**get status
+git status		//indexed
+git log			//list commits
+git diff		//compare workdir w/index
+git tag			//list tags
+git branch		//list branches
+gir branch -r		//list remote branches
+
+
+git checkout <F>	//F=file->workdir
+git checkout <B>	//B=branch->workdir
+..	git checkout master
+
+git checkout -b B	//workdir<-B=new branch
+$ git checkout -b version1
+
+//**branching cmds
+// Let v1 = name of a new branch
+git branch		//lists branches
+git branch v1		//create branch v1
+git checkout v1		//copy v1 to workdir
+		or
+git branch -b v1	//create & checkout v1	
+	//do some work
+	//must commit before change back to master
+	//stash if you can't commit yet
+git commit -a -m "created v1"
+git checkout master	//
+	//modify master until ready
+	//or merge v1 now
+git merge v1
+
+git branch -d version1		//delete branch
+
+git tag {mytag} {hash}			
+..	git tag						//lists tags
+..	git tag v1.0				//tags most recent commit
+..	git tag v1.0 1b2e1d63ff		//tag=v1.0, hash=1b2e1d63ff
+//git log will show the hash for each commit
+
+git remote add R S	//R=mylink, S=remote server
+git push R B		//R=remote, B=branch
+git push origin master	//origin=default name created by git clone
+
+//**remote cmds
+git clone			//copy to local
+git remote			//list remotes
+git remote add		//add remote links
+git push origin version1	//update remote from branch in local repo
+git pull					//update local repo with remote branches
+	//git pull = git fetch + git merge
+git pull version1			//update local repo with branch
+
+On the remote server:
+git init --bare /path/to/repo.git
+On the local machine:
+git remote add origin ssh://username@server:/path/to/repo.git
+(Note that ssh: is just one possible way of accessing the remote repository.)
+Now copy your local repository to the remote:
+git push --set-upstream origin master
+Adding --set-upstream (or -u) created an upstream (tracking) reference which is used by argument-less Git commands, e.g. git pull.
+.
+//Drop all your local changes and commits, 
+//fetch the latest history from the server and 
+//point your local master branch at it like this
+git fetch origin
+git reset --hard origin/master
+
+//GUI git version
+$ gitk

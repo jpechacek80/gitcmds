@@ -1,0 +1,67 @@
+git version
+git init
+git help
+git config
+git add
+git reset
+git commit
+git status
+git log
+git log --name-only
+git diff
+git rm
+git mv
+git checkout
+git tags
+git branch
+git remote -v		//lists 
+git remote add 
+
+git init: Initializes a new Git repository in the current directory
+Only after you input this does it accept further Git commands.
+
+git help: lists 21 most common git commands
+$ git help config //help on "config options"
+
+git config: Setting up Git for the first time.
+$ git config --list			//shows config settings
+$ git config --global user.name "jpechacek"
+$ git config --global user.email "jpechacek@yahoo.com"
+
+git add: Stages new files to be committed to the Git repository.
+
+
+git status: Check the repository status
+List files, changes to be committed, and which current branch of the repository.
+
+git commit: take a “snapshot” of the repository with the newly added files.
+Syntax:  $ commit -m “Comment Message here.”
+
+git branch: make changes while working with multiple collaborators 
+builds a new branch, or timeline of commits,
+of changes and file additions that are completely your own.
+$ git branch 						//list current branch
+$ git branch x_feature	//create new branch called 'x_feature'
+
+git checkout: Literally allows you to “check out” a repository that you are not currently inside.
+This is a navigational command that lets you move to the repository you want to check.
+You can use this command as git checkout master to look at the master branch, or git checkout cats to look at another branch.
+
+git merge: When you’re done working on a branch, you can merge your changes back to the master branch,
+which is visible to all collaborators.
+git merge cats would take all the changes you made to the “cats” branch and add them to the master.
+
+git remote add origin git@github.com:jpechacek80/helloworld.git
+git push -u origin master
+
+git remote add origin git@github.com:jpechacek80/git-cmds.git
+git push -u origin master
+
+
+git push: If you’re working on your local computer,
+and want your commits to be visible online on GitHub as well,
+you “push” the changes up to GitHub with this command.
+
+git pull: If you’re working on your local computer
+and want the most up-to-date version of your repository to work with,
+you “pull” the changes down from GitHub with this command.
