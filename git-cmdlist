@@ -37,12 +37,16 @@ $ git clone https://github.com/jpechacek80/mypjt
 // contains src files + .git directory + .gitignore
 
 git add: Stages new files to be committed to the Git repository.
+$ git add .				//adds all modified files in workdir
 
 git status: Check the repository status
-List files, changes to be committed, and which current branch of the repository.
+List files changes to be committed, andr
+which current branch of the repository.
+green:	staged files
+red:		modified, but not staged
 
 git commit: take a “snapshot” of the repository with the newly added files.
-Syntax:  $ commit -m “Comment Message here.”
+$ commit -m “Comment Message here.”
 
 git branch: make changes while working with multiple collaborators 
 builds a new branch, or timeline of commits,
