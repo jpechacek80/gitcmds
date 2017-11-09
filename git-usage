@@ -23,7 +23,7 @@ $ git reset fname		//unstage fname
 //** COMMIT
 $ git commit										//prompted comment
 $ git commit [-a] [-m msg]
-$ git commit -a -m Ver07				//stage all, then commit
+$ git commit -a -m "Ver07"			//stage all, then commit
 
 //**show commit log
 $ git log				//show hash
