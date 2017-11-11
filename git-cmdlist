@@ -4,11 +4,8 @@ git version
 git help
 git config
 git init, git clone
-git add, git reset
-git commit
-git status
-git log
-git log --name-only
+git add, git reset, git commit
+git status, git log, git log --name-only
 git diff
 git rm
 git mv
@@ -18,9 +15,9 @@ git branch
 git remote -v			//lists 
 git remote add 
 
-$ git version			//test installation
+$ git version				//test installation
 
-$ git help config //help on "config options"
+$ git help config		//help on "config options"
 $ git help					// lists 21 common git commands
 
 git config: Setting up Git for the first time.
@@ -47,8 +44,7 @@ $ git remote -v			//verify
 $ git fetch					//index->workdir
 $ git checkout			//local repo->workdir
 
-
-git add: Stages new files to be committed to the Git repository.
+//**Stage new files to be committed to the Git repository.
 $ git add .				//adds all modified files in workdir
 
 git status: Check the repository status
