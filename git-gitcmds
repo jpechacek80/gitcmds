@@ -1,4 +1,5 @@
 /git-cmds
+https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository
 http://rogerdudler.github.io/git-guide/
 
 //**nomenclature
@@ -24,9 +25,7 @@ $ git config --global [setting]
 	settings:
 	user.name "jsmith"
 	user.email jsmith@yahoo.com
-	user.editor "vi"
-	core.excludesfile ~/.gitignore_global
-	core.excludesfile ~/.gitignore_global
+	user.edit	core.excludesfile ~/.gitignore_global
 
 //**git Initialization
 $ git init			//creates .git directory
@@ -44,8 +43,8 @@ git log				//list commits
 git diff			//compare workdir w/index
 git tag				//list tags
 git branch		//list branches
-gir branch -r	//list remote branches
-
+git branch -r	//list remote branches
+						//list tracked files	
 
 git checkout <F>	//F=file->workdir
 git checkout <B>	//B=branch->workdir

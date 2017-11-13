@@ -1,4 +1,9 @@
-INSTALL
+//git-intro.txt
+*Purpose -- Creating an account on GitHub.com 
+allows ascess to version-controlled projects to the Web, 
+and ties in social network features
+
+//**Install
 $ sudo apt-get install git-all
 //**git cfg global file location
 C:\Users\jpech\.gitconfig	//windows
@@ -14,20 +19,10 @@ https://try.github.io/levels/1/challenges/1
 Linux =>terminal Git cmdline 
 Windows => download cmdline emulator or GitHub gui software
 						
-*Remote -- Creating an account on GitHub.com 
-allows ascess to version-controlled projects to the Web, 
-and ties in social network features
-
 //**Nomenclature
 Repository: (Repo) Directory where your projects are stored. 
 Can be a local folder on your computer, or online storage space on GitHub or other host. 
 You can store code files, text files, image files, etc inside a repository.
-
-Version Control: The purpose of Git.
-Without version control, you edit a text file, and either 
-1) overwrite the saved file or
-2) with "save as", or you save multiple versions. 
-Git keeps snapshots of every point in time in the projects history, so you can never lose or overwrite it.
 
 Commit: A Git command to take a snapshot of your repository at that point in time, 
 giving you a checkpoint to which you can reevaluate or restore your project to any previous state.
