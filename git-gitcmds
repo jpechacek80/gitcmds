@@ -7,9 +7,9 @@ repo				//Repository
 Local Repository	//local computer
 Remote Repository	//server computer
 Repository contains:
-workdir		//holds src files
-index		//staging area
-HEAD		//points to most recent commit
+workdir			//holds src files
+index				//staging area
+HEAD				//points to most recent commit
 branch			//a distinct version of src files
 master			//default branch for repo
 origin			//default link name for remote repo
@@ -32,10 +32,11 @@ $ git config --global [setting]
 $ git init			//creates .git directory
 
 //**src file data entry
-git add			//add src files to index
-git commit		//add src file to HEAD
-$ git add *.c
-$ git commit -a -m "mycomment"
+git add <file|dir>			//add src files to index
+$ git add *.c							//select files
+$ git add .								//select all files
+$ git commit -a -m "msg"	//adds all & commit
+
 
 //**get status
 git status		//indexed

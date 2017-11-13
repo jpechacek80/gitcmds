@@ -9,7 +9,7 @@ Enter same passphrase again: 147!Jik
 2f:b6:fc:7c:c3:4c:03:4b:86:20:1c:9b:f6:63:a7:2d jpech@DESKTOP-GA6OIAO
 
 $ cd ~/.ssh
-$ vi id_rsa.pub  		copy key  
+$ vi id_rsa.pubÂ Â 		copy keyÂ Â 
 ssh-rsa AAAAB3NzaC1yc...utDW6M5l+DQ+8qt jpech@DESKTOP-GA6OIAO
 
 https://github.com/settings/keys

@@ -45,7 +45,9 @@ $ git fetch					//index->workdir
 $ git checkout			//local repo->workdir
 
 //**Stage new files to be committed to the Git repository.
-$ git add .				//adds all modified files in workdir
+$ git add file1
+$ git add dir1			//adds all files in dir1 recursively
+$ git add .					//adds all modified files in workdir
 
 git status: Check the repository status
 List files changes to be committed, andr
