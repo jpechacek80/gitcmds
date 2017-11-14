@@ -30,15 +30,12 @@ $ git config --global [setting]
 //**git Initialization
 $ git init			//creates .git directory
 
-//**src file data entry
-git add <file|dir>				//add src files to index
-$ git add *.c							//select files
-$ git add .								//select all files
-$ git commit -a -m "msg"	//adds all modified & commit
+//**src file data entry git add <file|dir>				//add src files to index $ git add *.c							//select files $ git add .								//select all files $ git commit -a -m "msg"	//adds all modified & commit
 
 //**get status
 git status		//indexed
 git log				//list commits
+git ls-files	//list files in index
 git diff			//compare workdir w/index
 git tag				//list tags
 git branch		//list branches
