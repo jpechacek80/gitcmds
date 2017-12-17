@@ -1,0 +1,94 @@
+//git-cfg
+https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository
+http://rogerdudler.github.io/git-guide/
+
+//**nomenclature
+workdir     //working directory
+repo        //Repository  
+Local Repository  //local computer
+Remote Repository //server computer
+Repository contains:
+index       //cache, or staging area
+HEAD        //points to most recent commit
+branch      //a distinct version of src files
+master      //default branch for repo
+origin      //default link name for remote repo
+index       //files added, before committed
+tracked     //files previously committed
+origin= a link to a remote repo.
+master= the main branch.
+
+add         //add to index
+commit      //check-in repo
+
+
+//**install
+# apt-get install git
+# apt-get install git-all
+
+//**git Initialization
+git version   //test installation
+git config    //local and global settings
+git init      //creates .git directory
+
+
+//**Path of global Git cfgfile (.gitconfig)
+C:\Users\jpech\.gitconfig //Windows home		
+~/.gitconfig				      //Linux home
+/etc/.gitconfig  //??system cfg file
+
+//**Local Configuration
+~/.gitconfig    //local cfg file
+$ git config [setting]
+settings=
+  user.name "jsmith"
+  user.email jsmith@yahoo.com
+
+//**git Global Configuration
+~/.gitconfig    //local cfg file
+$ git config --global [setting]
+settings=
+  user.name "jsmith"
+  user.email jsmith@yahoo.com
+  user.editor "vi"
+  core.excludesfile ~/.gitignore_global
+
+//**git System Configuration
+$ git config --system [setting]
+
+
+//**global configuration
+$ git config --global user.name "jpechacek"
+$ git config --global user.email "jpechacek@yahoo.com"
+$ git config --list			//shows config settings
+
+//** Create .git directory in current directory 		
+$ git init	//creates .git repository dir (or reinitializes)
+$ rm -rf .git				//ends version ctrl
+
+//** .gitignore file in current directory
+.project	//ignored folder
+*.obj		  //ignore
+
+//**help
+$ git help			
+$ git help config //help on "config options"
+$ git help add	//help on "add" cmd
+
+//**ssh key setup
+$ ssh -V					//test if ssh is available
+$ ssh-keygen
+Generating public/private rsa key pair.
+Enter file in which to save the key (/home/jpech/.ssh/id_rsa):
+Created directory '/home/jpech/.ssh'.
+Enter passphrase (empty for no passphrase): 147!Jik
+Enter same passphrase again: 147!Jik
+2f:b6:fc:7c:c3:4c:03:4b:86:20:1c:9b:f6:63:a7:2d jpech@DESKTOP-GA6OIAO
+
+$ cd ~/.ssh
+$ vi id_rsa.pub  		copy key  
+ssh-rsa AAAAB3NzaC1yc...utDW6M5l+DQ+8qt jpech@DESKTOP-GA6OIAO
+
+https://github.com/settings/keys
+paste ssh key
+

@@ -1,0 +1,131 @@
+//git-remote
+
+git clone
+git remote
+git push
+git fetch
+git merge
+git pull
+git push
+
+//** Download Repo
+git clone <url> <dir1>
+$ git clone https://github.com/jsmith/pjt1
+$ git clone https://github.com/jsmith/pjt1 dir1
+
+//**Connection to remote repos
+remote              //list remote connection
+remote -add         //create new conn
+remote -rename      //rename conn
+remote -rm          //remove conn
+$ git remote        //list remote repos
+$ git remote -v     //verbose remote repos
+git remote add <url_ref> <url>
+//example1:  url_ref omitted
+$ git remote add https://github.com/jsmith/prjt1
+$ git remote        //list remote repos 
+>  origin           //default url_ref name
+$ git remote rm origin     //removes connection
+
+//example2: p1= abbrev name for the url
+$ git remote add p1 https://github.com/johnsmith/prjt1
+$ git remote rename p1 mypjt  //rename connection
+$ git remote rm p1            //removes connection
+
+//** Import remote repo into local reop
+git fetch <url_ref> <branch1>
+$ git fetch origin            //import all branches
+$ git fetch origin branch1    //import branc1
+
+//**Export local repo remote repos
+git push -u origin master		//syncs remote w/online repo
+		origin:					//default name from git clone cmd
+		master:					//default main branch
+
+//** Copy from repo to workdir
+git checkout <F>  //F=file->workdir
+git checkout <B>  //B=branch->workdir
+..  git checkout master
+
+git checkout -b B //workdir<-B=new branch
+$ git checkout -b version1
+
+//**branching cmds
+// Let v1 = name of a new branch
+git branch    //lists branches
+git branch v1   //create branch v1
+git checkout v1   //copy v1 to workdir
+    or
+git branch -b v1  //create & checkout v1  
+  //do some work
+  //must commit before change back to master
+  //stash if you can't commit yet
+git commit -a -m "created v1"
+git checkout master //
+  //modify master until ready
+  //or merge v1 now
+git merge v1
+
+git branch -d version1    //delete branch
+
+git remote add R S  //R=mylink, S=remote server
+git push R B    //R=remote, B=branch
+git push origin master  //origin=default name created by git clone
+
+git fetch----
+  doesn’t merge or modify any of your work
+  must merge it manually when you’re ready.
+
+git pull-----
+  fetches,then merges the remote branch to the current branch.
+
+//**remote cmds
+git clone     //copy to local
+git remote      //list remotes
+git remote add    //add remote links
+git push origin version1  //update remote from branch in local repo
+git pull          //update local repo with remote branches
+  //git pull = git fetch + git merge
+git pull version1     //update local repo with branch
+
+On the remote server:
+git init --bare /path/to/repo.git
+On the local machine:
+git remote add origin ssh://username@server:/path/to/repo.git
+(Note that ssh: is just one possible way of accessing the remote repository.)
+Now copy your local repository to the remote:
+git push --set-upstream origin master
+Adding --set-upstream (or -u) created an upstream (tracking) reference which is used by argument-less Git commands, e.g. git pull.
+.
+//Drop all your local changes and commits, 
+//fetch the latest history from the server and 
+//point your local master branch at it like this
+git fetch origin
+git reset --hard origin/master
+
+//GUI git version
+$ gitk
+git add F     //F=fname->index
+..  git add *.c
+git commit      //F->HEAD
+..  git commit -a -m mycomment
+git remote add R S  //R=mylink, S=remote server
+. 
+git push R B    //R=remote, B=branch
+..  git push origin master  
+  //origin=default name created by git clone
+
+$ git fetch
+__________________________________________________________
+$ git fetch feature_x
+__________________________________________________________
+$ git fetch origin
+$ git merge
+___________________________________________________________
+$ git pull
+___________________________________________________________
+$ git push origin master
+___________________________________________________________
+$ git checkout master
+___________________________________________________________
+$ git checkout branch

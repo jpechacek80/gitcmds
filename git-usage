@@ -23,13 +23,20 @@ $ git reset fname		//unstage fname
 //** COMMIT
 $ git commit										//prompted comment
 $ git commit [-a] [-m msg]
+$ git commit -a									//stage all tracked, then commit
 $ git commit -a -m "Ver07"			//stage all, then commit
+
+//do some work after commit
+$ git commit -amend						//replace last commit
 
 //**show commit log
 $ git log				//show hash
 $ git log -p 		//shows diff
 $ git log --name-only
 
+//h=hashabbrev, an=authorname, ar=authordate-relative, s=subject
+$ git log --pretty=format:"%h - %an, %ar : %s"
+ca82a6d - Scott Chacon, 6 years ago : changed the version number
 
 //** branch--create or delete branches
 $ git branch 						//list current branch
@@ -40,6 +47,12 @@ $ git branch < -d | -D |  -m > branch1
 	-D				delete merged branch1 (forced)
 	-m				rename current branch to branch1
 
+//**git checkout -- <file> is a dangerous command.
+Any changes you made to that file are gone —
+Git just copied another file over it.
+Don’t ever use this command unless you absolutely
+know that you don’t want the file.
+
 //** checkout--navigate branches
 ***checking out commits
 $ git checkout hash						//get all files in old vesion
@@ -48,7 +61,6 @@ $ git checkout hash myfile		//get old version of a file
 ***checking out branches
 $ git checkout master
 $ git checkout <existing-branch>		//copy working tree to cur dir
-
 
 git checkout
 git revert

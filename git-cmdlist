@@ -3,9 +3,13 @@ https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository
 git version
 git help
 git config
-git init, git clone
-git add, git reset, git commit
-git status, git log, git log --name-only
+git init
+git clone
+git add
+git reset
+git commit
+git status
+git log
 git diff
 git rm
 git mv
@@ -14,8 +18,6 @@ git tags
 git branch
 git remote -v			//lists 
 git remote add 
-
-$ git version				//test installation
 
 $ git help config		//help on "config options"
 $ git help					// lists 21 common git commands
@@ -27,14 +29,14 @@ $ git config --global user.name "jpechacek80"
 $ git config --global user.email "jpechacek@yahoo.com"
 
 //**Creates new local Git repo in the workdir
-git init					//create new empty local repo
+git init    					//create new empty local repo
 
 //**Copy remote Git repo in the workdir
 git clone <url> {pjtfolder}
-$ git clone https://github.com/jpechacek80/mypjt pjtfolder
-// creates a folder named pjtfolder
 $ git clone https://github.com/jpechacek80/mypjt
 // creates a folder named mypjt
+$ git clone https://github.com/jpechacek80/mypjt pjtfolder
+// creates a folder named pjtfolder
 
 //**Copy remote Git repo into inialized git directory.
 $ cd pjtdir
@@ -44,10 +46,6 @@ $ git remote -v			//verify
 $ git fetch					//index->workdir
 $ git checkout			//local repo->workdir
 
-//**Stage new files to be committed to the Git repository.
-$ git add file1
-$ git add dir1			//adds files in dir1 recursively
-$ git add .					//adds all modified files in workdir
 
 git status: Check the repository status
 Lists current branch of the repository.
@@ -56,6 +54,16 @@ red:		modified, but not staged
 
 git commit: take a “snapshot” of the repository with the newly added files.
 $ commit -m “Comment Message here.”
+
+file states:
+tracked--previously committed file
+  added to index, staged to commit
+  modified not added to index
+
+  unmodified tracked  //not need to recommit
+untracked--never committed
+    modified
+    un-modified
 
 git branch: make changes while working with multiple collaborators 
 builds a new branch, or timeline of commits,
@@ -71,12 +79,11 @@ git merge: When you’re done working on a branch, you can merge your changes ba
 which is visible to all collaborators.
 git merge cats would take all the changes you made to the “cats” branch and add them to the master.
 
-git remote add origin git@github.com:jpechacek80/helloworld.git
-git push -u origin master
-
+git remote add: adds a named connection
 git remote add origin git@github.com:jpechacek80/git-cmds.git
-git push -u origin master
 
+git push: push local commits to remote connection 
+$ git push -u origin master
 
 git push: If you’re working on your local computer,
 and want your commits to be visible online on GitHub as well,

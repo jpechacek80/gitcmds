@@ -1,59 +1,55 @@
 /git-cmds
-https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository
-http://rogerdudler.github.io/git-guide/
 
-//**nomenclature
-workdir			//working directory
-repo				//Repository	
-Local Repository	//local computer
-Remote Repository	//server computer
-Repository contains:
-workdir			//holds src files
-index				//staging area
-HEAD				//points to most recent commit
-branch			//a distinct version of src files
-master			//default branch for repo
-origin			//default link name for remote repo
+/**git Initialization
+git init    //creates .git directory
+git add     //add src files to index
+git reset   //remove src files from index
+git commit  //add src file to HEAD
+git status  //indexed
 
-//**install
-# apt-get install git-all
-$ git version			//test installation
-$ git config			//local and global settings
+//** stage files for commit
+git add <file|dir>        //add src files to index
+$ git add .               //select all files
+$ git add -A              //add all files/dir for commit
+$ git add *.c             //select files
+$ git reset	              //remove everything staged
+$ git reset fname         //remove fname from commit ready 
+$ git status	            //Lists modified (red), (green)files
+$ git commit              //equiv of check-in files
+$ git commit --amend      //
+$ git commit -a           //auto add modified tracked files
+$ git log                 //list commits, hashes
 
-//**git Global Configuration
-$ git config --global [setting]
-	settings:
-	user.name "jsmith"
-	user.email jsmith@yahoo.com
-	user.edit	core.excludesfile ~/.gitignore_global
-
-//**git Initialization
-$ git init			//creates .git directory
-
-//**src file data entry git add <file|dir>				//add src files to index $ git add *.c							//select files $ git add .								//select all files $ git commit -a -m "msg"	//adds all modified & commit
 
 //**get status
-git status		//indexed
-git log				//list commits
-git ls-files	//list files in index
-git diff			//compare workdir w/index
-git tag				//list tags
-git branch		//list branches
-git branch -r	//list remote branches
-						//list tracked files	
+git ls-files    //list tracked files
+git diff        //compare workdir w/index
+git diff--cached//compare workdir w/index
+git tag         //list tags
+gitk            //graphical tools
+git difftool
+
+
+//git log obtains the hash for each commit
+git tag {mytag} {hash}      
+..  git tag           //lists tags
+..  git tag v1.0      //tags most recent commit
+..  git tag v1.0 1b2e1d63ff   //tag hash=1b2e1d63ff
 
 git checkout <F>	//F=file->workdir
 git checkout <B>	//B=branch->workdir
 ..	git checkout master
 
 git checkout -b B	//workdir<-B=new branch
-$ git checkout -b version1
+..	git checkout -b version1
 
+git branch			//list branches
+gir branch -r		//list remote branches
 //**branching cmds
 // Let v1 = name of a new branch
-git branch		//lists branches
-git branch v1		//create branch v1
-git checkout v1		//copy v1 to workdir
+git branch					//lists branches
+git branch v1				//create branch v1
+git checkout v1			//copy v1 to workdir
 		or
 git branch -b v1	//create & checkout v1	
 	//do some work
@@ -65,41 +61,7 @@ git checkout master	//
 	//or merge v1 now
 git merge v1
 
+
 git branch -d version1		//delete branch
 
-git tag {mytag} {hash}			
-..	git tag						//lists tags
-..	git tag v1.0				//tags most recent commit
-..	git tag v1.0 1b2e1d63ff		//tag=v1.0, hash=1b2e1d63ff
-//git log will show the hash for each commit
 
-git remote add R S	//R=mylink, S=remote server
-git push R B		//R=remote, B=branch
-git push origin master	//origin=default name created by git clone
-
-//**remote cmds
-git clone			//copy to local
-git remote			//list remotes
-git remote add		//add remote links
-git push origin version1	//update remote from branch in local repo
-git pull					//update local repo with remote branches
-	//git pull = git fetch + git merge
-git pull version1			//update local repo with branch
-
-On the remote server:
-git init --bare /path/to/repo.git
-On the local machine:
-git remote add origin ssh://username@server:/path/to/repo.git
-(Note that ssh: is just one possible way of accessing the remote repository.)
-Now copy your local repository to the remote:
-git push --set-upstream origin master
-Adding --set-upstream (or -u) created an upstream (tracking) reference which is used by argument-less Git commands, e.g. git pull.
-.
-//Drop all your local changes and commits, 
-//fetch the latest history from the server and 
-//point your local master branch at it like this
-git fetch origin
-git reset --hard origin/master
-
-//GUI git version
-$ gitk
