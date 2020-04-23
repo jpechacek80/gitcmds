@@ -4,34 +4,35 @@ git-usage
 $ git help config		//help on "config options"
 $ git help add			//help on "add" cmd
 $ git config -l			//lists configuration
-$ git status				//staged green, untracked red
-$ git log						//git index history
-$ git remote				//lists remotes
-$ git branch				//lists branches
+$ git status			//staged green, untracked red
+$ git log			//git index history
+$ git remote			//lists remotes
+$ git branch			//lists branches
 $ git branch -r			//lists remote branches
-$ git log --name-only	//lists files in Repo
+$ git branch -a			//lists all branches
+$ git log --name-only		//lists files in Repo
 $ git show --name-only
 
 //** ADD TRACKED FILES
 $ git add myfile		//add myfile to index (stage)
 $ git add mydir			//add a directory to index
-$ git add -A				//adds all files  to index
+$ git add -A			//adds all files  to index
 $ git add *.cs			/add specific files
-$ git reset					//remove everything staged
+$ git reset			//remove everything staged
 $ git reset fname		//unstage fname
 
 //** COMMIT
-$ git commit										//prompted comment
+$ git commit			//prompted comment
 $ git commit [-a] [-m msg]
-$ git commit -a									//stage all tracked, then commit
-$ git commit -a -m "Ver07"			//stage all, then commit
+$ git commit -a			//stage all tracked, then commit
+$ git commit -a -m "Ver07"	//stage all, then commit
 
 //do some work after commit
-$ git commit -amend						//replace last commit
+$ git commit -amend		//replace last commit
 
 //**show commit log
-$ git log				//show hash
-$ git log -p 		//shows diff
+$ git log			//show hash
+$ git log -p 			//shows diff
 $ git log --name-only
 
 //h=hashabbrev, an=authorname, ar=authordate-relative, s=subject
@@ -55,12 +56,12 @@ know that you don’t want the file.
 
 //** checkout--navigate branches
 ***checking out commits
-$ git checkout hash						//get all files in old vesion
+$ git checkout hash			//get all files in old vesion
 $ git checkout hash myfile		//get old version of a file
 
 ***checking out branches
 $ git checkout master
-$ git checkout <existing-branch>		//copy working tree to cur dir
+$ git checkout <existing-branch>	//copy working tree to cur dir
 
 git checkout
 git revert
