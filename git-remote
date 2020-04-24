@@ -3,15 +3,22 @@
 git clone
 git remote
 git push
-git fetch
-git merge
 git pull
-git push
+git merge
+git fetch
 
-//** Download Repo
-git clone <url> <dir1>
-$ git clone https://github.com/jsmith/pjt1
-$ git clone https://github.com/jsmith/pjt1 dir1
+//**Copy remote Git repo into local repo
+$ cd pjtdir
+$ git init
+$ git remote add origin https://github.com/jpechacek80/myproject.git
+$ git remote -v			//verify
+$ git fetch					//index->workdir
+$ git checkout			//local repo->workdir
+
+//**Copy remote Git repo in the workdir
+// git clone <url> <dir1>
+$ git clone https://github.com/jsmith/pjt1      //wdir=pjt1
+$ git clone https://github.com/jsmith/pjt1 dir1 //wdir=dir1
 
 //**Connection to remote repos
 remote              //list remote connection
@@ -20,12 +27,11 @@ remote -rename      //rename conn
 remote -rm          //remove conn
 $ git remote        //list remote repos
 $ git remote -v     //verbose remote repos
-git remote add <url_ref> <url>
+
 //example1:  url_ref omitted
+git remote add <url_ref> <url>
 $ git remote add https://github.com/jsmith/prjt1
 $ git remote        //list remote repos 
->  origin           //default url_ref name
-$ git remote rm origin     //removes connection
 
 //example2: p1= abbrev name for the url
 $ git remote add p1 https://github.com/johnsmith/prjt1
@@ -36,6 +42,7 @@ $ git remote rm p1            //removes connection
 git fetch <url_ref> <branch1>
 $ git fetch origin            //import all branches
 $ git fetch origin branch1    //import branc1
+>  origin           //default url_ref name
 
 //**Export local repo remote repos
 git push -u origin master		//syncs remote w/online repo
@@ -129,3 +136,5 @@ ___________________________________________________________
 $ git checkout master
 ___________________________________________________________
 $ git checkout branch
+
+$ git remote rm origin     //removes connection

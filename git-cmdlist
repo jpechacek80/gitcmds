@@ -8,52 +8,26 @@ git clone
 git add
 git reset
 git commit
+git statsh
 git status
 git log
 git diff
-git rm
-git mv
 git checkout
 git tags
 git branch
-git remote -v			//lists 
+git remote -v
 git remote add 
+git rm
+git mv
 
 $ git help config		//help on "config options"
 $ git help					// lists 21 common git commands
-
-git config: Setting up Git for the first time.
-~\.gitconfig						//path for cfg file
-$ git config --list			//shows config settings
-$ git config --global user.name "jpechacek80"
-$ git config --global user.email "jpechacek@yahoo.com"
-
-//**Creates new local Git repo in the workdir
-git init    					//create new empty local repo
-
-//**Copy remote Git repo in the workdir
-git clone <url> {pjtfolder}
-$ git clone https://github.com/jpechacek80/mypjt
-// creates a folder named mypjt
-$ git clone https://github.com/jpechacek80/mypjt pjtfolder
-// creates a folder named pjtfolder
-
-//**Copy remote Git repo into inialized git directory.
-$ cd pjtdir
-$ git init
-$ git remote add origin https://github.com/jpechacek80/myproject.git
-$ git remote -v			//verify
-$ git fetch					//index->workdir
-$ git checkout			//local repo->workdir
 
 
 git status: Check the repository status
 Lists current branch of the repository.
 green:	staged files
 red:		modified, but not staged
-
-git commit: take a “snapshot” of the repository with the newly added files.
-$ commit -m “Comment Message here.”
 
 file states:
 tracked--previously committed file

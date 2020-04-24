@@ -3,10 +3,13 @@ git config --list
 git config --global user.name "jpechacek80"
 git config --global user.email "jpechacek@yahoo.com"
 
-// init <directory>          //create local repo
+// init <directory>   //create local repo
 >git init
->git add .                   //from exiting src
+>git add .            //from exiting src
 >git commit
+// edit a file
+>git push             //pushes changes
+
 
 // clone <repo> <directory>  //calls on git init
 >git clone ssh://john@example.com/path/my-project.git

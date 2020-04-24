@@ -35,18 +35,18 @@ git init      //creates .git directory
 //**Path of global Git cfgfile (.gitconfig)
 C:\Users\jpech\.gitconfig //Windows home		
 ~/.gitconfig				      //Linux home
-/etc/.gitconfig  //??system cfg file
+/etc/.gitconfig           //system cfg file
 
 //**Local Configuration
-~/.gitconfig    //local cfg file
 $ git config [setting]
 settings=
   user.name "jsmith"
   user.email jsmith@yahoo.com
 
 //**git Global Configuration
-~/.gitconfig    //local cfg file
+$ gitconfig setting
 $ git config --global [setting]
+$ git config --system [setting]
 settings=
   user.name "jsmith"
   user.email jsmith@yahoo.com
@@ -54,26 +54,25 @@ settings=
   core.excludesfile ~/.gitignore_global
 
 //**git System Configuration
-$ git config --system [setting]
 
 
 //**global configuration
 $ git config --global user.name "jpechacek"
 $ git config --global user.email "jpechacek@yahoo.com"
-$ git config --list			//shows config settings
+$ git config --list	
 
 //** Create .git directory in current directory 		
-$ git init	//creates .git repository dir (or reinitializes)
+$ git init	        //creates .git repository dir (or reinitializes)
 $ rm -rf .git				//ends version ctrl
 
 //** .gitignore file in current directory
-.project	//ignored folder
-*.obj		  //ignore
+.project	          //ignored folder
+*.obj		            //ignore
 
 //**help
 $ git help			
-$ git help config //help on "config options"
-$ git help add	//help on "add" cmd
+$ git help config   //help on "config options"
+$ git help add	    //help on "add" cmd
 
 //**ssh key setup
 $ ssh -V					//test if ssh is available

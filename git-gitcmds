@@ -61,7 +61,7 @@ git checkout master	//
 	//or merge v1 now
 git merge v1
 
-
 git branch -d version1		//delete branch
+git branch -D version1		//delete override branch
 
 
