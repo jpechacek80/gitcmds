@@ -4,10 +4,10 @@ git-usage
 $ git help config		//help on "config options"
 $ git help add			//help on "add" cmd
 $ git config -l			//lists configuration
-$ git status			//staged green, untracked red
-$ git log			//git index history
-$ git remote			//lists remotes
-$ git branch			//lists branches
+$ git status			  //staged green, untracked red
+$ git log			      //git index history
+$ git remote			  //lists remotes
+$ git branch			  //lists branches
 $ git branch -r			//lists remote branches
 $ git branch -a			//lists all branches
 $ git log --name-only		//lists files in Repo
