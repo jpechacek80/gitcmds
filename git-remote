@@ -1,7 +1,7 @@
 //git-remote
 
-git clone
 git remote
+git clone
 git push
 git pull
 git merge
@@ -10,7 +10,7 @@ git fetch
 //**Copy remote Git repo into local repo
 $ cd pjtdir
 $ git init
-$ git remote add origin https://github.com/jpechacek80/myproject.git
+$ git remote add origin https://github.com/jsmith/myproject.git
 $ git remote -v			//verify
 $ git fetch					//index->workdir
 $ git checkout			//local repo->workdir
@@ -30,15 +30,15 @@ $ git remote -v     //verbose remote repos
 
 //example1:  url_ref omitted
 git remote add <url_ref> <url>
-$ git remote add https://github.com/jsmith/prjt1
 $ git remote        //list remote repos 
+$ git remote add https://github.com/jsmith/prjt1
 
 //example2: p1= abbrev name for the url
 $ git remote add p1 https://github.com/johnsmith/prjt1
 $ git remote rename p1 mypjt  //rename connection
 $ git remote rm p1            //removes connection
 
-//** Import remote repo into local reop
+//** Import remote repo index to local repo
 git fetch <url_ref> <branch1>
 $ git fetch origin            //import all branches
 $ git fetch origin branch1    //import branc1
@@ -52,9 +52,9 @@ git push -u origin master		//syncs remote w/online repo
 //** Copy from repo to workdir
 git checkout <F>  //F=file->workdir
 git checkout <B>  //B=branch->workdir
-..  git checkout master
+$ git checkout master
 
-git checkout -b B //workdir<-B=new branch
+//** Create Branch & make current 
 $ git checkout -b version1
 
 //**branching cmds
@@ -80,8 +80,8 @@ git push R B    //R=remote, B=branch
 git push origin master  //origin=default name created by git clone
 
 git fetch----
-  doesn’t merge or modify any of your work
-  must merge it manually when you’re ready.
+  doesn't merge or modify any of your work
+  must merge it manually when you're ready.
 
 git pull-----
   fetches,then merges the remote branch to the current branch.
@@ -128,6 +128,7 @@ $ git fetch feature_x
 __________________________________________________________
 $ git fetch origin
 $ git merge
+$ git merge origin/master
 ___________________________________________________________
 $ git pull
 ___________________________________________________________
