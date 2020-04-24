@@ -16,6 +16,7 @@ $ git reset	              //remove everything staged
 $ git reset fname         //remove fname from commit ready 
 $ git status	            //Lists modified (red), (green)files
 $ git commit              //equiv of check-in files
+$ git commit -a -m "mycomment"
 $ git commit --amend      //
 $ git commit -a           //auto add modified tracked files
 $ git log                 //list commits, hashes
