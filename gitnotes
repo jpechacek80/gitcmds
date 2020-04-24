@@ -5,7 +5,7 @@ git config --global user.email "jpechacek@yahoo.com"
 
 // init <directory>   //create local repo
 >git init
->git add .            //from exiting src
+>git add -A            //from exiting src
 >git commit
 // edit a file
 >git push             //pushes changes
