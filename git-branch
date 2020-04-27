@@ -20,3 +20,14 @@ git merge v1
 
 git branch -d version1    //delete branch
 
+
+git stash = git stash push
+git stash apply
+git stash pop       //apply and remove
+git stash list
+git stash create
+git stash store
+
+git stash show,drop,pop,clear
+
+
