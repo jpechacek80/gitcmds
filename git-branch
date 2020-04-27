@@ -1,16 +1,16 @@
 //git-branch
 //**branching cmds
 
-// Let v1 = name of a new branch
-git branch    //lists branches
+//find out what branch you're on
+git branch -a     //lists remote & local branches
 
 git branch v1     //create branch v1
 git checkout v1   //copy v1 to workdir
     or
 git branch -b v1  //create & checkout v1  
-  //do some work
-  //must commit before change back to master
-  //stash if you can't commit yet
+
+//commit change before returning to master
+//stash if you can't commit yet
 git commit -a -m "created v1"
 
 git checkout master //
