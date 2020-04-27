@@ -5,25 +5,23 @@
 git branch -a     //lists remote & local branches
 
 git branch v1     //create branch v1
-git checkout v1   //copy v1 to workdir
-    or
-git branch -b v1  //create & checkout v1  
+git checkout v1   //swith to branch v1
+//    or
+git checkout -b v1  //create & checkout v1  
 
-//commit change before returning to master
-//stash if you can't commit yet
+//commit(or stash) change before returning to master
 git commit -a -m "created v1"
 
-git checkout master //
-  //modify master until ready
-  //or merge v1 now
-git merge v1
+git checkout master     //modify master
+//    or 
+git merge v1            //merge v1 now
 
-git branch -d version1    //delete branch
+git branch -d version1  //delete branch
 
-
+//stash--------------
 git stash = git stash push
 git stash apply
-git stash pop       //apply and remove
+git stash pop
 git stash list
 git stash create
 git stash store
