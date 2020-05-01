@@ -1,19 +1,30 @@
 //git-remote
 
-git remote
-git clone
-git push
-git pull
-git merge
-git fetch
+// <link> = a shorthand name for a remote repo url 
+// default link name = "origin"
 
+git remote 
+git remote add <link> <url>
+git clone
+git push <link> <branch> <--tags>
+git pull    //current remote branch
+git fetch <link>
+git merge (assume current branch)
+
+?? If you have multiple remotes
+
+git@gitlab.drfms.spec.com:lm-mtg/docs.git
+
+$ git remote -v			//verify
 //**Remote-->local repo
 $ cd pjtdir
-$ git init
 $ git remote add origin https://github.com/jsmith/myproject.git
-$ git remote -v			//verify
-$ git fetch					//index->workdir
+
+$ git fetch	origin	//index->workdir, (current remote) 
 $ git checkout			//local repo->workdir
+
+git fetch = git fetch origin 
+
 
 //**Remote-->local repo
 // git clone <url> <dir1>

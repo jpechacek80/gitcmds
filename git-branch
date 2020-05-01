@@ -3,6 +3,7 @@
 
 //find out what branch you're on
 git branch -a     //lists remote & local branches
+(master is the created default branch)
 
 git branch v1     //create branch v1
 git checkout v1   //swith to branch v1
@@ -12,9 +13,17 @@ git checkout -b v1  //create & checkout v1
 //commit(or stash) change before returning to master
 git commit -a -m "created v1"
 
-git checkout master     //modify master
-//    or 
+// merge--
+git branch master   //switch to master branch
+git merge v1        //merge v1 -> master
+
+git merge remotename/branchname
+
+git checkout master     //switch to master
 git merge v1            //merge v1 now
+
+// udate remote with new branch--
+git push --set-upstream origin v1
 
 git branch -d version1  //delete branch
 

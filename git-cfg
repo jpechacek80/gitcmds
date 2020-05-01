@@ -1,22 +1,4 @@
 //git-cfg
-https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository
-http://rogerdudler.github.io/git-guide/
-
-//**nomenclature
-workdir     //working directory
-repo        //Repository  
-Local Repository  //local computer
-Remote Repository //server computer
-Repository contains:
-index       //cache, or staging area
-HEAD        //points to most recent commit
-branch      //a distinct version of src files
-master      //default branch for repo
-origin      //default link name for remote repo
-index       //files added, before committed
-tracked     //files previously committed
-origin= a link to a remote repo.
-master= the main branch.
 
 add         //add to index
 commit      //check-in repo
@@ -73,6 +55,10 @@ $ rm -rf .git				//ends version ctrl
 $ git help			
 $ git help config   //help on "config options"
 $ git help add	    //help on "add" cmd
+$ git config --global alias.co checkout
+$ git config --global alias.br branch
+$ git config --global alias.ci commit
+$ git config --global alias.st status
 
 //**ssh key setup
 $ ssh -V					//test if ssh is available
