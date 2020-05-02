@@ -1,18 +1,11 @@
 //git-cfg
 
-add         //add to index
-commit      //check-in repo
-
-
 //**install
 # apt-get install git
 # apt-get install git-all
 
 //**git Initialization
 git version   //test installation
-git config    //local and global settings
-git init      //creates .git directory
-
 
 //**Path of global Git cfgfile (.gitconfig)
 C:\Users\jpech\.gitconfig //Windows home		
@@ -20,15 +13,13 @@ C:\Users\jpech\.gitconfig //Windows home
 /etc/.gitconfig           //system cfg file
 
 //**Local Configuration
-$ git config [setting]
-settings=
-  user.name "jsmith"
-  user.email jsmith@yahoo.com
+$ git config user.name "jsmith"
+$ git config user.email "jsmith@yahoo.com"
+$ git config --list	
 
 //**git Global Configuration
 $ gitconfig setting
 $ git config --global [setting]
-$ git config --system [setting]
 settings=
   user.name "jsmith"
   user.email jsmith@yahoo.com
@@ -36,25 +27,9 @@ settings=
   core.excludesfile ~/.gitignore_global
 
 //**git System Configuration
+$ git config --system [setting]
 
-
-//**global configuration
-$ git config --global user.name "jpechacek"
-$ git config --global user.email "jpechacek@yahoo.com"
-$ git config --list	
-
-//** Create .git directory in current directory 		
-$ git init	        //creates .git repository dir (or reinitializes)
-$ rm -rf .git				//ends version ctrl
-
-//** .gitignore file in current directory
-.project	          //ignored folder
-*.obj		            //ignore
-
-//**help
-$ git help			
-$ git help config   //help on "config options"
-$ git help add	    //help on "add" cmd
+//**aias
 $ git config --global alias.co checkout
 $ git config --global alias.br branch
 $ git config --global alias.ci commit
