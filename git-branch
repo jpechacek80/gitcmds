@@ -9,11 +9,7 @@ git branch v1     //create branch v1
 git checkout v1   //swith to branch v1
 //    or
 git checkout -b v1  //create & checkout v1  
-
-//commit(or stash) change before returning to master
-git commit -a -m "created v1"
-
-// merge--
+git commit -a -m "comment"   // make a commit
 git branch master   //switch to master branch
 git merge v1        //merge v1 -> master
 
