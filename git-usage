@@ -54,14 +54,10 @@ Git just copied another file over it.
 Don’t ever use this command unless you absolutely
 know that you don’t want the file.
 
-//** checkout--navigate branches
+//** checkout-
 ***checking out commits
 $ git checkout hash			//get all files in old vesion
 $ git checkout hash myfile		//get old version of a file
-
-***checking out branches
-$ git checkout master
-$ git checkout <existing-branch>	//copy working tree to cur dir
 
 git checkout
 git revert
