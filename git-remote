@@ -6,9 +6,9 @@
 git remote            //lists
 git remote add <link> <url>
 git clone git clone <url> <dir1>
-git push <link> <branch> <--tags>
 git fetch <url_ref> <branch1>
 git merge <branch>
+git push <link> <branch> <--tags>
 git pull              //= fetch + merge
 
 
@@ -18,6 +18,8 @@ $ git fetch	origin	//index->workdir, (current remote)
 $ git checkout			//local repo->workdir
 
 git fetch = git fetch origin 
+git merge origin master
+git pull = fetch + merge
 
 
 remote -rename      //rename conn
