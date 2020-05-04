@@ -3,20 +3,25 @@
 
 //find out what branch you're on
 git branch -a     //lists remote & local branches
-(master is the created default branch)
+  (master is the created default branch)
+  ('*' marks the branch checked out)
 
 git branch v1     //create branch v1
 git checkout v1   //swith to branch v1
-//    or
-git checkout -b v1  //create & checkout v1  
 git commit -a -m "comment"   // make a commit
 git branch master   //switch to master branch
 git merge v1        //merge v1 -> master
 
-git merge remotename/branchname
 
 git checkout master     //switch to master
 git merge v1            //merge v1 now
+
+git checkout -b v1  //create & checkout v1  
+??git merge remotename/branchname
+
+//Lists filtered (Relative to current branch)
+git branch --merged     //list merged branches
+git branch --no-merged  //list unmerged branches
 
 // udate remote with new branch--
 git push --set-upstream origin v1
