@@ -5,7 +5,7 @@
 
 git remote            //lists
 git remote add <link> <url>
-git clone git clone <url> <dir1>
+git clone <url> <dir1>
 git fetch <url_ref> <branch1>
 git merge <branch>
 git push <link> <branch> <--tags>
