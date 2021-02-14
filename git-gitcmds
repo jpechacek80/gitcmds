@@ -16,6 +16,7 @@ $ git reset	              //remove everything staged
 $ git reset fname         //remove fname from commit ready 
 $ git status	            //Lists modified (red), (green)files
 $ git commit              //equiv of check-in files
+$ git commit -a -m "mycomment"
 $ git commit --amend      //
 $ git commit -a           //auto add modified tracked files
 $ git log                 //list commits, hashes
@@ -36,12 +37,11 @@ git tag {mytag} {hash}
 ..  git tag v1.0      //tags most recent commit
 ..  git tag v1.0 1b2e1d63ff   //tag hash=1b2e1d63ff
 
-git checkout <F>	//F=file->workdir
-git checkout <B>	//B=branch->workdir
+git checkout <F>	    //F=file->workdir
+git checkout <B>	    //B=branch->workdir
 ..	git checkout master
-
-git checkout -b B	//workdir<-B=new branch
 ..	git checkout -b version1
+..	git checkout HEAD~1 afile
 
 git branch			//list branches
 gir branch -r		//list remote branches

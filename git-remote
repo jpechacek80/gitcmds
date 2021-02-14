@@ -1,45 +1,35 @@
 //git-remote
 
-git remote
-git clone
-git push
-git pull
-git merge
-git fetch
+// <link> = a shorthand name for a remote repo url 
+// default link name = "origin"
 
-//**Copy remote Git repo into local repo
-$ cd pjtdir
-$ git init
-$ git remote add origin https://github.com/jsmith/myproject.git
+git remote            //lists
+git remote add <link> <url>
+git clone <url> <dir1>
+git fetch <url_ref> <branch1>
+git merge <branch>
+git push <link> <branch> <--tags>
+git pull              //= fetch + merge
+
+
 $ git remote -v			//verify
-$ git fetch					//index->workdir
+$ git remote add origin git@gitlab.drfms.spec.com:lm-mtg/docs.git 
+$ git fetch	origin	//index->workdir, (current remote) 
 $ git checkout			//local repo->workdir
 
-//**Copy remote Git repo in the workdir
-// git clone <url> <dir1>
-$ git clone https://github.com/jsmith/pjt1      //wdir=pjt1
-$ git clone https://github.com/jsmith/pjt1 dir1 //wdir=dir1
+git fetch = git fetch origin 
+git merge origin master
+git pull = fetch + merge
 
-//**Connection to remote repos
-remote              //list remote connection
-remote -add         //create new conn
+
 remote -rename      //rename conn
 remote -rm          //remove conn
-$ git remote        //list remote repos
-$ git remote -v     //verbose remote repos
-
-//example1:  url_ref omitted
-git remote add <url_ref> <url>
-$ git remote        //list remote repos 
-$ git remote add https://github.com/jsmith/prjt1
-
 //example2: p1= abbrev name for the url
 $ git remote add p1 https://github.com/johnsmith/prjt1
 $ git remote rename p1 mypjt  //rename connection
 $ git remote rm p1            //removes connection
 
 //** Import remote repo index to local repo
-git fetch <url_ref> <branch1>
 $ git fetch origin            //import all branches
 $ git fetch origin branch1    //import branc1
 >  origin           //default url_ref name
@@ -57,24 +47,6 @@ $ git checkout master
 //** Create Branch & make current 
 $ git checkout -b version1
 
-//**branching cmds
-// Let v1 = name of a new branch
-git branch    //lists branches
-git branch v1   //create branch v1
-git checkout v1   //copy v1 to workdir
-    or
-git branch -b v1  //create & checkout v1  
-  //do some work
-  //must commit before change back to master
-  //stash if you can't commit yet
-git commit -a -m "created v1"
-git checkout master //
-  //modify master until ready
-  //or merge v1 now
-git merge v1
-
-git branch -d version1    //delete branch
-
 git remote add R S  //R=mylink, S=remote server
 git push R B    //R=remote, B=branch
 git push origin master  //origin=default name created by git clone
@@ -82,17 +54,20 @@ git push origin master  //origin=default name created by git clone
 git fetch----
   doesn't merge or modify any of your work
   must merge it manually when you're ready.
-
 git pull-----
   fetches,then merges the remote branch to the current branch.
 
 //**remote cmds
 git clone     //copy to local
+git push          //current branch-> remote branch
+git pull         //current branch<- remote branch 
 git remote      //list remotes
+
 git remote add    //add remote links
+
 git push origin version1  //update remote from branch in local repo
-git pull          //update local repo with remote branches
-  //git pull = git fetch + git merge
+
+//git pull = git fetch + git merge
 git pull version1     //update local repo with branch
 
 On the remote server:
@@ -110,29 +85,21 @@ Adding --set-upstream (or -u) created an upstream (tracking) reference which is 
 git fetch origin
 git reset --hard origin/master
 
-//GUI git version
-$ gitk
-git add F     //F=fname->index
-..  git add *.c
-git commit      //F->HEAD
-..  git commit -a -m mycomment
 git remote add R S  //R=mylink, S=remote server
 . 
 git push R B    //R=remote, B=branch
 ..  git push origin master  
   //origin=default name created by git clone
 
-$ git fetch
 __________________________________________________________
-$ git fetch feature_x
+$ git fetch origin          //update index
+$ git merge origin/master   //merge (current branch) w/remote repo
+___________________________________________________________
+$ git fetch feature_x       //update index with remote branch
 __________________________________________________________
-$ git fetch origin
-$ git merge
-$ git merge origin/master
+$ git pull                  //syncs remote--local repo
 ___________________________________________________________
-$ git pull
-___________________________________________________________
-$ git push origin master
+$ git push origin master    //syncs local-->remote repo branch
 ___________________________________________________________
 $ git checkout master
 ___________________________________________________________

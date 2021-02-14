@@ -1,0 +1,24 @@
+//git-nomenclature
+https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository
+http://rogerdudler.github.io/git-guide/
+
+//**nomenclature
+workdir     //working directory
+repo        //Repository  
+Local Repository  //local computer
+Remote Repository //server computer
+
+Repository contains:
+index       //cache, or staging area
+HEAD        //points to most recent commit
+master      //default branch for repo
+branch      //a distinct version of src files
+origin      //default link name for remote repo
+index       //files added, before committed
+tracked     //files previously committed
+
+current branch
+:  local current branch
+  remote branch
+
+
