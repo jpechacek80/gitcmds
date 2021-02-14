@@ -17,11 +17,8 @@ git checkout master     //switch to master
 git merge v1            //merge v1 now
 
 git checkout -b v1  //create & checkout v1  
-??git merge remotename/branchname
-
-//Lists filtered (Relative to current branch)
-git branch --merged     //list merged branches
 git branch --no-merged  //list unmerged branches
+??git merge remotename/branchname
 
 // udate remote with new branch--
 git push --set-upstream origin v1

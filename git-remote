@@ -13,7 +13,7 @@ git pull              //= fetch + merge
 
 
 $ git remote -v			//verify
-$ git remote add origingit@gitlab.drfms.spec.com:lm-mtg/docs.git 
+$ git remote add origin git@gitlab.drfms.spec.com:lm-mtg/docs.git 
 $ git fetch	origin	//index->workdir, (current remote) 
 $ git checkout			//local repo->workdir
 

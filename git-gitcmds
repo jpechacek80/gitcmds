@@ -37,12 +37,11 @@ git tag {mytag} {hash}
 ..  git tag v1.0      //tags most recent commit
 ..  git tag v1.0 1b2e1d63ff   //tag hash=1b2e1d63ff
 
-git checkout <F>	//F=file->workdir
-git checkout <B>	//B=branch->workdir
+git checkout <F>	    //F=file->workdir
+git checkout <B>	    //B=branch->workdir
 ..	git checkout master
-
-git checkout -b B	//workdir<-B=new branch
 ..	git checkout -b version1
+..	git checkout HEAD~1 afile
 
 git branch			//list branches
 gir branch -r		//list remote branches
