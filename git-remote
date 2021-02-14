@@ -3,40 +3,24 @@
 // <link> = a shorthand name for a remote repo url 
 // default link name = "origin"
 
-git remote 
+git remote            //lists
 git remote add <link> <url>
-git clone
+git clone <url> <dir1>
+git fetch <url_ref> <branch1>
+git merge <branch>
 git push <link> <branch> <--tags>
-git pull    //current remote branch
-git fetch <link>
-git merge (assume current branch)
+git pull              //= fetch + merge
 
-?? If you have multiple remotes
-
-git@gitlab.drfms.spec.com:lm-mtg/docs.git
 
 $ git remote -v			//verify
-//**Remote-->local repo
-$ cd pjtdir
-$ git remote add origin https://github.com/jsmith/myproject.git
-
+$ git remote add origin git@gitlab.drfms.spec.com:lm-mtg/docs.git 
 $ git fetch	origin	//index->workdir, (current remote) 
 $ git checkout			//local repo->workdir
 
 git fetch = git fetch origin 
+git merge origin master
+git pull = fetch + merge
 
-
-//**Remote-->local repo
-// git clone <url> <dir1>
-$ git clone https://github.com/jsmith/pjt1      //wdir=pjt1
-$ git clone https://github.com/jsmith/pjt1 dir1 //wdir=dir1
-
-//**Connection to remote repos
-$ git remote        //list remote repos
-$ git remote -v     //verbose remote repos
-
-remote -add         //create new conn
-$ git remote add https://github.com/jsmith/prjt1
 
 remote -rename      //rename conn
 remote -rm          //remove conn
@@ -46,7 +30,6 @@ $ git remote rename p1 mypjt  //rename connection
 $ git remote rm p1            //removes connection
 
 //** Import remote repo index to local repo
-git fetch <url_ref> <branch1>
 $ git fetch origin            //import all branches
 $ git fetch origin branch1    //import branc1
 >  origin           //default url_ref name
