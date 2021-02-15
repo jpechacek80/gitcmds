@@ -1,0 +1,10 @@
+//git-reset
+
+checkout <tag|HEAD~n> foo.c  //no change to HEAD
+checkout branch <-b>    //moves branchptr & HEAD
+                        //affets idx & workdir
+
+reset  <tag|HEAD~n> foo.c  //no change to HEAD
+reset <branch|HEAD~n>    //moves HEAD
+options:    -=hard|--soft
+
