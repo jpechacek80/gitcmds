@@ -8,3 +8,23 @@ reset  <tag|HEAD~n> foo.c  //no change to HEAD
 reset <branch|HEAD~n>    //moves HEAD
 options:    -=hard|--soft
 
+git reset
+  -unstaging a file
+  -move the branch HEAD
+  -Return Wdir to previous commit
+git revert
+  -rollback commits
+  -overwrite Wdir
+  -generate a commit to invert another commit
+git checkout
+  -move HEAD or Branches pointers
+  -change Wdir without changing commit history
+
+
+   git checkout #hash
++  git branch -b newbranch
+=> git checkout -b newbranch #hash 
+
+git stash
+git reset --hard #hash
+git stash pop
