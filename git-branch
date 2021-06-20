@@ -1,10 +1,6 @@
 //git-branch
-//**branching cmds
 
-//find out what branch you're on
 git branch -a     //lists remote & local branches
-  (master is the created default branch)
-  ('*' marks the branch checked out)
 
 git branch v1     //create branch v1
 git checkout v1   //swith to branch v1
@@ -12,18 +8,16 @@ git commit -a -m "comment"   // make a commit
 git branch master   //switch to master branch
 git merge v1        //merge v1 -> master
 
-
 git checkout master     //switch to master
 git merge v1            //merge v1 now
 
 git checkout -b v1  //create & checkout v1  
 git branch --no-merged  //list unmerged branches
-??git merge remotename/branchname
 
-// udate remote with new branch--
-git push --set-upstream origin v1
+git branch -d v1              //Delete local branch
+git push origin --delete v1   //Delete remote branch
+git fetch -p                  //sychronizes pruned remote branch
 
-git branch -d version1  //delete branch
 
 //stash--------------
 git stash = git stash push
@@ -32,7 +26,11 @@ git stash pop
 git stash list
 git stash create
 git stash store
+git stash drop
 
 git stash show,drop,pop,clear
 
+
+// udate remote with new branch--
+git push --set-upstream origin v1
 

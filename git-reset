@@ -13,9 +13,9 @@ git reset
   -move the branch HEAD
   -Return Wdir to previous commit
 git revert
-  -rollback commits
+  -writes new commit on branch tip
+  -undoes a specific commit
   -overwrite Wdir
-  -generate a commit to invert another commit
 git checkout
   -move HEAD or Branches pointers
   -change Wdir without changing commit history
