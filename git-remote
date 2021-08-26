@@ -3,7 +3,7 @@
 // <link> = a shorthand name for a remote repo url 
 // default link name = "origin"
 
-git remote            //lists
+$ git remote -v			//lists
 git remote add <link> <url>
 git clone <url> <dir1>
 git fetch <url_ref> <branch1>
@@ -11,11 +11,15 @@ git merge <branch>
 git push <link> <branch> <--tags>
 git pull              //= fetch + merge
 
+// Push to 2 remotes---
+$ git remote add origin git@gitlab.com:jpechacek/gitcmds.git
+$ git remote add origin git@github.com:jpechacek80/gitcmds.git
+$ git remote set-url --add --push origin git@github.com:jpechacek80/gitcmds.git
+$ git remote set-url --add --push origin git@gitlab.com:jpechacek/gitcmds.git 
 
-$ git remote -v			//verify
-$ git remote add origin git@gitlab.drfms.spec.com:lm-mtg/docs.git 
-$ git fetch	origin	//index->workdir, (current remote) 
-$ git checkout			//local repo->workdir
+//Can't pull from 2 remotes
+$ git fetch --all   //fetches all remotes
+
 
 git fetch = git fetch origin 
 git merge origin master
