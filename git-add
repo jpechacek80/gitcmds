@@ -1,0 +1,11 @@
+//git-reset
+
+add -A        //Add Everything
+git add .     //Exclude higher dir in repo
+git add -u    //New & Modified files only
+
+//Example
+git add u
+git commit --amend
+git push --force 
+

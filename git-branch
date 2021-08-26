@@ -2,35 +2,28 @@
 
 git branch -a     //lists remote & local branches
 
-git branch v1     //create branch v1
-git checkout v1   //swith to branch v1
-git commit -a -m "comment"   // make a commit
-git branch master   //switch to master branch
-git merge v1        //merge v1 -> master
+git branch v1       //create branch v1
+git checkout v1     //swith to branch v1
+git checkout -b v1  //create and checkout
 
-git checkout master     //switch to master
-git merge v1            //merge v1 now
-
-git checkout -b v1  //create & checkout v1  
 git branch --no-merged  //list unmerged branches
 
 git branch -d v1              //Delete local branch
 git push origin --delete v1   //Delete remote branch
 git fetch -p                  //sychronizes pruned remote branch
 
-
-//stash--------------
-git stash = git stash push
-git stash apply
-git stash pop
-git stash list
-git stash create
-git stash store
-git stash drop
-
-git stash show,drop,pop,clear
-
-
 // udate remote with new branch--
 git push --set-upstream origin v1
 
+# create branch from remote
+$ git checkout --track origin/v1
+
+# create branch from remote branch
+$ git branch --track v2 origin/v1
+
+//**** WORKFLOW
+$ git branch feature      // create branch from checked out branch
+$ git checkout feature    // checkout new branch
+$ git branch -b feature   // create + checkout
+
+$ git branch <new-branch> v1.2

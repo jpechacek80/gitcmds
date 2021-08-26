@@ -1,0 +1,11 @@
+//git-difftool
+
+git config --global diff.tool winmerge
+git config --global merge.tool winmerge
+
+$ git difftool <target> <source>
+
+$ git difftool    //wdir<->index
+$ git difftool <branch|commit|file>   //wdir<=>compare
+
+

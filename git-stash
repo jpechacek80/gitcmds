@@ -1,0 +1,25 @@
+// git stash
+git stash list    //listed
+git stash show    //inspect
+
+## Usage:
+git stash         //= git stash push
+git pop           //
+
+//stash--------------
+git stash = git stash push
+git stash apply
+git stash pop
+git stash list
+git stash create
+git stash store
+git stash drop
+
+git stash show,drop,pop,clear
+
+## WorkFlow
+git fetch
+git stash                 //save changes
+git merge origin/feature
+git stash pop
+
