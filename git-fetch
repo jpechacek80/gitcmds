@@ -3,3 +3,13 @@
 $ git fetch               // affects the current branch.
 $ git fetch --all         // all branches
 git fetch --all --prune   // will do the cleaning up!
+
+//** Import remote repo index to local repo
+$ git fetch origin            //import all branches
+$ git fetch origin branch1    //import branc1
+
+git fetch----
+  doesn't merge or modify any of your work
+  must merge it manually when you're ready.
+git pull-----
+  fetches,then merges the remote branch to the current branch.

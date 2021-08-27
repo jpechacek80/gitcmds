@@ -8,3 +8,8 @@ $ git checkout -b v1      //create & checkout v1
 
 $ git checkout -b <branch> --track origin/<branch>
 
+//** Copy from repo to workdir
+git checkout <F>  //F=file->workdir
+git checkout <B>  //B=branch->workdir
+$ git checkout master
+

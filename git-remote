@@ -3,70 +3,39 @@
 // <link> = a shorthand name for a remote repo url 
 // default link name = "origin"
 
-$ git remote -v			//lists
+$ git remote              //list remotes
+$ git remote -v			      //lists
+$ git remote show origin  //list upstream links
 git remote add <link> <url>
-git clone <url> <dir1>
-git fetch <url_ref> <branch1>
-git merge <branch>
-git push <link> <branch> <--tags>
-git pull              //= fetch + merge
 
 // Push to 2 remotes---
 $ git remote add origin git@gitlab.com:jpechacek/gitcmds.git
 $ git remote add origin git@github.com:jpechacek80/gitcmds.git
 $ git remote set-url --add --push origin git@github.com:jpechacek80/gitcmds.git
 $ git remote set-url --add --push origin git@gitlab.com:jpechacek/gitcmds.git 
-
+$ git remote show upstream
 //Can't pull from 2 remotes
 $ git fetch --all   //fetches all remotes
 
 
-git fetch = git fetch origin 
-git merge origin master
-git pull = fetch + merge
-
-
 remote -rename      //rename conn
 remote -rm          //remove conn
-//example2: p1= abbrev name for the url
-$ git remote add p1 https://github.com/johnsmith/prjt1
-$ git remote rename p1 mypjt  //rename connection
-$ git remote rm p1            //removes connection
+//example:
+$ git remote add origin https:github.com/johnsmith/prjt1
+$ git remote rename origin mypjt  //rename connection
+$ git remote rm origin            //removes connection
 
-//** Import remote repo index to local repo
-$ git fetch origin            //import all branches
-$ git fetch origin branch1    //import branc1
->  origin           //default url_ref name
 
 //**Export local repo remote repos
 git push -u origin master		//syncs remote w/online repo
-		origin:					//default name from git clone cmd
-		master:					//default main branch
+origin:					//default name from git clone cmd
+master:					//default main branch
 
-//** Copy from repo to workdir
-git checkout <F>  //F=file->workdir
-git checkout <B>  //B=branch->workdir
-$ git checkout master
-
-//** Create Branch & make current 
-$ git checkout -b version1
-
-git remote add R S  //R=mylink, S=remote server
-git push R B    //R=remote, B=branch
-git push origin master  //origin=default name created by git clone
-
-git fetch----
-  doesn't merge or modify any of your work
-  must merge it manually when you're ready.
-git pull-----
-  fetches,then merges the remote branch to the current branch.
 
 //**remote cmds
 git clone     //copy to local
 git push          //current branch-> remote branch
 git pull         //current branch<- remote branch 
-git remote      //list remotes
-
 git remote add    //add remote links
 
 git push origin version1  //update remote from branch in local repo
@@ -81,6 +50,7 @@ git remote add origin ssh://username@server:/path/to/repo.git
 (Note that ssh: is just one possible way of accessing the remote repository.)
 Now copy your local repository to the remote:
 git push --set-upstream origin master
+git push -u origin master //shorthand
 Adding --set-upstream (or -u) created an upstream (tracking) reference which is used by argument-less Git commands, e.g. git pull.
 .
 //Drop all your local changes and commits, 
@@ -89,24 +59,3 @@ Adding --set-upstream (or -u) created an upstream (tracking) reference which is 
 git fetch origin
 git reset --hard origin/master
 
-git remote add R S  //R=mylink, S=remote server
-. 
-git push R B    //R=remote, B=branch
-..  git push origin master  
-  //origin=default name created by git clone
-
-__________________________________________________________
-$ git fetch origin          //update index
-$ git merge origin/master   //merge (current branch) w/remote repo
-___________________________________________________________
-$ git fetch feature_x       //update index with remote branch
-__________________________________________________________
-$ git pull                  //syncs remote--local repo
-___________________________________________________________
-$ git push origin master    //syncs local-->remote repo branch
-___________________________________________________________
-$ git checkout master
-___________________________________________________________
-$ git checkout branch
-
-$ git remote rm origin     //removes connection
