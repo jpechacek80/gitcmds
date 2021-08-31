@@ -6,24 +6,14 @@ git branch v1       //create branch v1
 git checkout v1     //swith to branch v1
 git checkout -b v1  //create and checkout
 
-git branch --no-merged  //list unmerged branches
-
-git branch -d v1              //Delete local branch
-git push origin --delete v1   //Delete remote branch
-git fetch -p                  //sychronizes pruned remote branch
-
 // udate remote with new branch--
 git push --set-upstream origin v1
 
-# create branch from remote
-$ git checkout --track origin/v1
 
-# create branch from remote branch
-$ git branch --track v2 origin/v1
+# Create branch from remote branch
+$ git branch --track v1 origin/v1
 
-//**** WORKFLOW
-$ git branch feature      // create branch from checked out branch
-$ git checkout feature    // checkout new branch
-$ git branch -b feature   // create + checkout
-
-$ git branch <new-branch> v1.2
+//Delete Remote branch
+$ git branch -d v1              //Delete local branch
+$ git push origin --delete v1   //Delete remote branch
+$ git fetch -p                  //sychronizes pruned remote branch
