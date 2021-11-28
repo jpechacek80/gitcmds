@@ -3,6 +3,9 @@
 // <link> = a shorthand name for a remote repo url 
 // default link name = "origin"
 
+// Test ssh connection:
+$ ssh -T git@github.com
+
 $ git remote              //list remotes
 $ git remote -v			      //lists
 $ git remote show origin  //list upstream links
