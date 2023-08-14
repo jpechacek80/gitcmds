@@ -1,9 +1,5 @@
 //git-reset
 
-checkout <tag|HEAD~n> foo.c  //no change to HEAD
-checkout branch <-b>    //moves branchptr & HEAD
-                        //affets idx & workdir
-
 reset  <tag|HEAD~n> foo.c  //no change to HEAD
 reset <branch|HEAD~n>    //moves HEAD
 options:    -=hard|--soft
@@ -16,15 +12,6 @@ git revert
   -writes new commit on branch tip
   -undoes a specific commit
   -overwrite Wdir
-git checkout
-  -move HEAD or Branches pointers
-  -change Wdir without changing commit history
 
-
-   git checkout #hash
-+  git branch -b newbranch
-=> git checkout -b newbranch #hash 
-
-git stash
 git reset --hard #hash
-git stash pop
+git stash push/pop
