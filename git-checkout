@@ -1,15 +1,16 @@
 //git-checkout
-Switch branches or restore working tree files
-Updates files in the working tree to match the version in the index or the specified tree.
-If no pathspec was given, git checkout will also update HEAD to set the specified branch as the current branch.
+Replaces files in workdir with files from a commit in the repo
+
+Either a file, branch, or tag is specified.
+git checkout <F>  //F=file -> workdir, HEAD unchanged = current commit.
+git checkout <B>  //all files -> workdir, HEAD=last commit in branch
+git checkout <tag> //all files -> workdir, HEAD=specific commit
 
 $ git checkout master     //switch to master
-$ git checkout -b v1      //create & checkout v1 
+$ git checkout -b v1      //create branch & checkout v1
 
-$ git checkout -b <branch> --track origin/<branch>
+//--track remote repo/branch
+$ git checkout -b v1 --track origin/v1
 
-//** Copy from repo to workdir
-git checkout <F>  //F=file->workdir
-git checkout <B>  //B=branch->workdir
-$ git checkout master
+
 
