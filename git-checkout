@@ -5,6 +5,7 @@ Either a file, branch, or tag is specified.
 git checkout <F>  //F=file -> workdir, HEAD unchanged = current commit.
 git checkout <B>  //all files -> workdir, HEAD=last commit in branch
 git checkout <tag> //all files -> workdir, HEAD=specific commit
+checkout <tag|HEAD~n> foo.c  //no change to HEAD
 
 $ git checkout master     //switch to master
 $ git checkout -b v1      //create branch & checkout v1
