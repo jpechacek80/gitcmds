@@ -16,14 +16,10 @@ branch      //a distinct version of src files
 origin      //default link name for remote repo
 tracked     //files previously committed
 
-
 HEAD & <branch> are pointers.
 <branch> points the last commit
 HEAD points to current commit in each branch.
 
-checkout <branch> sets HEAD=<branch>
-checkout <branch> moves HEAD & branch to the last commit
-checkout #hash moves HEAD to a specific commit
 index compares Wdir w/ HEAD
 index track changes between Wdir & HEAD commit
 
