@@ -18,8 +18,8 @@ tracked     //files previously committed
 
 
 HEAD & <branch> are pointers.
-HEAD points to current commit
 <branch> points the last commit
+HEAD points to current commit in each branch.
 
 checkout <branch> sets HEAD=<branch>
 checkout <branch> moves HEAD & branch to the last commit
