@@ -1,11 +1,7 @@
-//git-reset
+//git-add
 
-add -A        //Add Everything
-git add .     //Exclude higher dir in repo
-git add -u    //New & Modified files only
+git add -A   // Stages Everything
+git add -u   // Stages only Modified Files
+git add .    // Stages everything, without Deleted Files
 
-//Example
-git add u
-git commit --amend
-git push --force 
-
+git reset unstages
