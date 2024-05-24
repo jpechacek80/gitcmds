@@ -12,19 +12,21 @@ C:\Users\jpech\.gitconfig //Windows home
 ~/.gitconfig				      //Linux home
 /etc/.gitconfig           //system cfg file
 
-//**Local Configuration
-$ git config user.name "jsmith"
-$ git config user.email "jsmith@yahoo.com"
-$ git config --list	
-
 //**git Global Configuration
-$ gitconfig setting
+// Affects ~/.gitconfig
 $ git config --global [setting]
 settings=
   user.name "jsmith"
   user.email jsmith@yahoo.com
   user.editor "vi"
   core.excludesfile ~/.gitignore_global
+$ git config -global user.name "jsmith" 
+$ git config -global user.email "jsmith@yahoo.com"
+$ git config --list	
+
+//**Local Configuration         //local repo config
+$ git config user.name "jsmith" 
+$ git config user.email "jsmith@yahoo.com"
 
 //**git System Configuration
 $ git config --system [setting]

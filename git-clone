@@ -1,0 +1,26 @@
+//gits-clone
+
+git clone
+
+//TERMS
+repo= repository
+origin= a link to a remote repo.
+master= the main branch.
+
+git clone [src] <d=cur dir | path>
+		src= local or remote server path:
+			i.e.  https:github.com/username/repo
+			i.e.  ~\src\Local_Repo\Prj1
+..
+$ git clone https://github.com/jsmith/test
+$ cd test						//local repo directory
+$ git remote -v			//lists link "origin"
+	>origin  git@github.com:jsmith/test.git (fetch)
+	>origin  git@github.com:jsmith/test.git (push)
+
+//SSH URL 
+clone git@github.com:user/repo.git      //github sshkeys
+
+//HTTPS URL
+hclone ttps://github.com/user/repo.git  //github passw token
+
