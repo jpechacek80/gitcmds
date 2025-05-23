@@ -2,6 +2,8 @@
 
 // <link> = a shorthand name for a remote repo url 
 // default link name = "origin"
+origin:			//default name from git clone cmd
+master:			//default main branch
 
 // Test ssh connection:
 $ ssh -T git@github.com
@@ -9,13 +11,15 @@ $ ssh -T git@github.com
 $ git remote              //list remotes
 $ git remote -v			      //lists
 $ git remote show origin  //list upstream links
-git remote add <link> <url>
 
-// Push to 2 remotes---
-$ git remote add origin git@gitlab.com:jpechacek/gitcmds.git
-$ git remote add origin git@github.com:jpechacek80/gitcmds.git
-$ git remote set-url --add --push origin git@github.com:jpechacek80/gitcmds.git
-$ git remote set-url --add --push origin git@gitlab.com:jpechacek/gitcmds.git 
+//git remote add <link> <url>
+$ git remote add origin git@github.com:jpechacek80/getcmds.git
+// fix the url
+$ git remote set-url origin git@github.com:jpechacek80/gitcmds.git
+
+$ git remote add origin 
+$ git remote set-url <--add> <--push> origin git@gitlab.com:jpechacek/gitcmds.git
+
 $ git remote show upstream
 //Can't pull from 2 remotes
 $ git fetch --all   //fetches all remotes
@@ -25,15 +29,14 @@ remote -rename      //rename conn
 remote -rm          //remove conn
 //example:
 $ git remote add origin https:github.com/johnsmith/prjt1
+//fix the url
+$ git remote set-url origin git@github.com:jpechacek80/prjt1.git
+//edit or delete the connection
 $ git remote rename origin mypjt  //rename connection
 $ git remote rm origin            //removes connection
 
-
 //**Export local repo remote repos
 git push -u origin master		//syncs remote w/online repo
-origin:					//default name from git clone cmd
-master:					//default main branch
-
 
 //**remote cmds
 git clone     //copy to local
